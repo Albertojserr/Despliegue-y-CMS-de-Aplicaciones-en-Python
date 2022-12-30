@@ -1,0 +1,25 @@
+Tarea 1
+
+Para crear el entorno:
+Primero instalas python3-venv.
+Luego creas en entorno con:
+python3 -m venv venv (Esto último puede tener el nombre que quiera cada uno)
+Para activar el entorno ejecutamos:
+source venv/bin/activate
+Ya estamos en el entorno por lo que instalaremos los paquetes necesarios que aparecen en requirements.txt. Se han obtenido del archivo inicial poetry.lock.
+pip install -r requirements.txt
+
+
+Para ver que base de datos vamos a usar, miramos en django_tutorial/settings.py y vemos que pone:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+Hay nos aparece que usaremos sqlite y el nombre de la base de datos.
+Para crear la base de datos hacemos el migrate. python manage.py migrate.
+Para crear un superusuario hacemos: python manage.py createsuperuser y lo creamos, en mi caso he usado admin, admin@admin.com, admin1234 como usuario,correo y contraseña respectivamente.
+Ejecutamos python manage.py runserver y entramos en el apartado de /admin. Desde aquí podemos crear las dos preguntas que se nos piden.
+Luego vamos a /polls y podemos ver las dos preguntas hechas y que se puede responder a cada pregunta con las distintas opciones ya establecidas.
+Se puede ver el resultado en PollsTarea1.png y AdminTarea1.png.

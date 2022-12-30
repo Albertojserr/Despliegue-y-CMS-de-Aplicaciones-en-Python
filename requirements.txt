@@ -1,1 +1,4 @@
 Django
+asgiref
+pytz
+sqlparse
