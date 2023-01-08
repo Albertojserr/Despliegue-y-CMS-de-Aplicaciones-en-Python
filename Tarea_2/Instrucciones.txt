@@ -1,0 +1,9 @@
+Tarea 2
+Primero creamos una nueva carpeta con los mismos archivos que en el principio de la anterior tarea.
+Después creamos un entorno virtual, lo activamos e instalamos las dependencias necesarias.
+pip install -r requirements.txt
+Instalamos pip install mysqlclient, para permitir a python trabajar con mysql.
+Accedemos a mysql: mysql -u *root* -p *root*
+Creamos una base de datos: CREATE DATABASE basedjango;
+Un usuario: CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'usuario';
+y le damos privilegios para editar la base de datos: GRANT ALL PRIVILEGES ON basedjango.* TO 'usuario'@'localhost';
