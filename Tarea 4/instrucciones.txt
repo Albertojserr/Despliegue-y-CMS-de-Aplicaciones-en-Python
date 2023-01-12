@@ -1,0 +1,12 @@
+Tarea 4
+Creamos un entorno virtual y lo activamos.
+Intalamos mezzanine: pip install mezzanine
+Creamos un proyecto con mezzanine-project proyecto_mezza
+Entramos en la carpeta del proyecto: cd proyecto_mezza
+Creamos la base de datos: python manage.py migrate y el superusuario:python manage.py createsuperuser (admin,admin@admin.com,admin1234)
+Abrimos el servidor python manage.py runserver
+En la página web entramos a admin, y pinchamos en la parte de settings para cambiar el nombre: en site title he puesto MezzanineTarea4 y en tagline he puesto Tarea 4. AMbos están en la parte de site.
+Para crear un artículo he ido a la parte de blog posts y creado un post, este ha sido de la tarea 1 con las imágenes que corroboran que ha funcionado.
+Para hacer la copia de seguridad de la base hacemos python manage.py dumpdata > copiabase.json
+
+

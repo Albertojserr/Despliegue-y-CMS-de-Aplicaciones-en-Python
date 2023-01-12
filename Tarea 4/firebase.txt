@@ -1,0 +1,10 @@
+FIREBASE
+
+Firebase es una plataforma digital diseñada para que el desarrollo de aplicaciones web sea de rápido y eficiente, con el objetivo de mejorar el rendimiento de las mismas a través de la implementación de sus distintos módulos que harán que la aplicación sea mucho más manejable, segura y fácil de utilizar para los usuarios.
+
+Esta plataforma se encuentra alojada en la nube.
+
+Firebase ayuda a los desarrolladores a ahorrar tiempo en el desarrollo de aplicaciones y también reduce el tiempo de comercialización de las aplicaciones.
+Firebase proporciona un entorno completamente sin servidor que requiere que los usuarios paguen según las solicitudes. Esto da como resultado menos preocupaciones relacionadas con el escalado y una mejor eficiencia.
+La implementación de Firebase tiende a ser sencilla y rápida.
+Comparado con Firebase, MySQL es mejor para transacciones de varias filas. Por otro lado, Firebase es una mejor opción cuando se trata de administrar grandes conjuntos de datos porque NoSQL escala los datos horizontalmente y es mucho más rápido que MySQL.
