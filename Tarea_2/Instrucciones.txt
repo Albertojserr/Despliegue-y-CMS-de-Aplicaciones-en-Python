@@ -1,9 +1,29 @@
 Tarea 2
+Debemos entrar al administrador: sudo -s en mi caso.
 Primero creamos una nueva carpeta con los mismos archivos que en el principio de la anterior tarea.
 Después creamos un entorno virtual, lo activamos e instalamos las dependencias necesarias.
 pip install -r requirements.txt
 Instalamos pip install mysqlclient, para permitir a python trabajar con mysql.
-Accedemos a mysql: mysql -u *root* -p *root*
+Accedemos a mysql: mysql -u *root* -p *root*  (Donde pone root ponemos el usuario y la contraseña creada)
 Creamos una base de datos: CREATE DATABASE basedjango;
 Un usuario: CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'usuario';
 y le damos privilegios para editar la base de datos: GRANT ALL PRIVILEGES ON basedjango.* TO 'usuario'@'localhost';
+En settings.py cambiamos la database a:
+DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.mysql',
+              'NAME': 'basedjango',
+              'USER': 'usuario',
+              'PASSWORD': 'usuario',
+              'HOST': 'localhost',
+              'PORT': '3306',
+          }
+      }
+y cambiamos ALLOWED_HOSTS = ['www.entornoprod.com'] para luego ponerlo en el servidor elegido.
+Luego hacemos python manage.py migrate para crear las tablas y base de datos.
+Creamos un usuario: python manage.py createsuperuser
+Para instalar nginx usaremos sudo apt-get install nginx.
+Luego lo configuraremos y veremos el estado en el que se encuentra sudo systemctl status nginx.
+Para iniciarlo sudo systemctl start nginx, pararlo sudo systemctl stop nginx y para hacer que se inicie cuando arranque la máquina sudo systemctl enable nginx.
+Cuando ya lo tengamos configurado, y haya un cambio entonces usaremos sudo systemctl reload nginx para que carguen los cambios.
+Se puede comprobar que la página web funciona en las fotos de la carpeta.

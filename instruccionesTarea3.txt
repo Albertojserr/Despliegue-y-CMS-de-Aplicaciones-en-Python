@@ -1,0 +1,12 @@
+Tarea 3
+Primero insertaremos <h2>*Nombre*</h2> en polls/templates/polls/index.html.
+Luego cambiaremos el background poniendo una foto sustituyendo la antigua en polls/static/polls/images/background.jpg.
+Ahora en polls/models.py insertamos:
+class Categoria(models.Model):
+    Abr = models.CharField(max_length=4)
+    Nombre = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.Abr+" - "+self.Nombre
+Para crear la tabla hacemos python manage.py makemigrations y luego python manage.py migrate.
+Luego en polls/admin.py ponemos: from .models import Choice, Question, Categoria y añadimos al final: admin.site.register(Categoria)
