@@ -10,3 +10,4 @@ class Categoria(models.Model):
         return self.Abr+" - "+self.Nombre
 Para crear la tabla hacemos python manage.py makemigrations y luego python manage.py migrate.
 Luego en polls/admin.py ponemos: from .models import Choice, Question, Categoria y añadimos al final: admin.site.register(Categoria)
+Podemos ver el resultado de los cambios en las fotos de la carpeta fotosTarea3
